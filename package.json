@@ -1,0 +1,26 @@
+{
+  "name": "data-conduit",
+  "version": "1.0.0",
+  "description": "A simple singleton interface between MongoDB and your code. Manages one connection to many queries per process.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisterCode415/data-conduit.git"
+  },
+  "keywords": [
+    "mongodb",
+    "nodejs",
+    "singleton",
+    "connection",
+    "manager"
+  ],
+  "author": "Brian Kenny <papaviking@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/MisterCode415/data-conduit/issues"
+  },
+  "homepage": "https://github.com/MisterCode415/data-conduit#readme"
+}
