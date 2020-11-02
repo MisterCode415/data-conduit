@@ -19,6 +19,9 @@ const DataConduit = function() {
     return
   }
   this.init = async (options={}) => {
+    if(!process.process.env.DB_HOST || !process.env.DB_PORT) {
+      throw new Error(`environment variables not found`)
+    }
     if(options.database) {
       selectedDatabase = options.database
     }
