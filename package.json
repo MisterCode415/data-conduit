@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/MisterCode415/data-conduit/issues"
   },
-  "homepage": "https://github.com/MisterCode415/data-conduit#readme"
+  "homepage": "https://github.com/MisterCode415/data-conduit#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.2"
+  }
 }

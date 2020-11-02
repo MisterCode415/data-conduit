@@ -4,10 +4,13 @@ const mongoClient     = require('mongodb').MongoClient
 const dbUrl           = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/`
 const path            = require('path')
 
-const DataConduit = function() {
+const DataConduit = function(config) {
   let connection = null
   let dbo = null
-  let selectedDatabase = null
+  const selectedDatabase = config.databaseName
+  const connectionString = config.connectionString
+  const port = config.port
+  
   const connect = async () => {
     connection = await mongoClient.connect(dbUrl, { useUnifiedTopology: true }).catch(err=>{
       if(err) {
@@ -15,7 +18,7 @@ const DataConduit = function() {
         process.exit()
       }
     }) //, function(err, db) {}
-    dbo = connection.db(selectedDatabase||appSettings.databaseName)
+    dbo = connection.db(selectedDatabase)
     return
   }
   this.init = async (options={}) => {
