@@ -5,6 +5,7 @@ A simple singleton interface between MongoDB and your code. Manages one connecti
 Requires .env file at root of application  
 *DB_HOST*=localhost  
 *DB_PORT*=3333  
+*DB_NAME*=your_database
 
 **Usage:**   
 const conduit = require('data-conduit')  
