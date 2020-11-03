@@ -1,14 +1,24 @@
 'use strict'
 
 /**
- * Solves equations of the form a * x = b
+ * Singleton wrapper for Mongo NodeJS client
+ * 
+ * @author
+ * Brian Kenny <papaviking@gmail.com>
  * @example
- * // returns null
- * globalNS.method1(5, 10);
+ * // returns {status:'ok'|'error', message: '...'}
+ * await database.init({
+ *     uri:      process.env.HOST,
+ *     port:     process.env.PORT,
+ *     database: process.env.NAME,
+ * })
  * @example
- * // returns 3
- * globalNS.method(5, 15);
- * @returns {Number} Returns the value of x for the equation.
+ * // returns handle to connection instance
+ * database.connection()
+ * @example
+ * // disconnects singleton connection, be aware of that side effect
+ * database.disconnect()
+ * @returns null
  */
 
 const mongoClient     = require('mongodb').MongoClient
