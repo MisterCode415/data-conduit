@@ -4,7 +4,7 @@
   "description": "A simple singleton interface between MongoDB and your code. Manages one connection to many queries per process.",
   "main": "index.js",
   "scripts": {
-    "test": "jest index.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,10 @@
     "url": "https://github.com/MisterCode415/data-conduit/issues"
   },
   "homepage": "https://github.com/MisterCode415/data-conduit#readme",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.2"
+  },
   "devDependencies": {
     "jest": "^26.6.2"
   }
