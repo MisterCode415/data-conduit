@@ -1,4 +1,4 @@
-# data-conduit v1.0.0
+# data-conduit v1.0.3
 A simple singleton interface between MongoDB and your code. Manages one connection to many queries per process. Reuse your connection across multiple modules running under the same instance.
 
 **Configure:**
